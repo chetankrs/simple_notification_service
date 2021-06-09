@@ -41,9 +41,6 @@ public class NotificationIntegrationTests {
 	private static final String HOST = "http://localhost:";
 
 	@Autowired
-	private MockMvc mvc;
-
-	@Autowired
 	ObjectMapper objectMapper;
 
 	@LocalServerPort
@@ -114,22 +111,6 @@ public class NotificationIntegrationTests {
 		msg.setSubject("Test Subject - Integration Test");
 		msg.setMessage("Body of Message");
 		return msg;
-	}
-
-	private String generateMessageJson() throws IOException {
-		String messageString = null;
-				try {
-					messageString = objectMapper.writeValueAsString(generateMessage());
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-		return messageString;
-	}
-
-	private String generateInvalidMessageJson() throws IOException {
-		Message msg = generateMessage();
-		msg.setFrom("invalid-domain");
-		return objectMapper.writeValueAsString(msg);
 	}
 
 }
