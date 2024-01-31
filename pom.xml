@@ -13,7 +13,7 @@
 	<artifactId>simple_notification_service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>simple_notification_service</name>
-	<description>Simple Notification Service to send events to multiple channels</description>
+	<description>Simple Notification Service to produce events to multiple channels</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
